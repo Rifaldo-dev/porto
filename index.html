@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* General Styling */
+        body {
+            overflow: hidden;
+        }
+        .navbar-logo {
+            font-family: 'Pacifico', cursive;
+            font-size: 1.5rem;
+            color: #ff6f61;
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #ff6f61;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .profile-image:hover {
+            transform: scale(1.1);
+        }
+        .roadmap li {
+            padding: 20px 20px 20px 50px;
+            margin: 20px 0;
+            border-left: 3px solid #ff6f61;
+            position: relative;
+        }
+        .roadmap li::before {
+            content: "";
+            position: absolute;
+            left: -7px;
+            top: 20px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #ff6f61;
+            border: 3px solid #f7f7f7;
+        }
+        /* Skills Scrolling Section */
+        .skills-section {
+            overflow: hidden;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .skills-section i {
+            font-size: 2rem;
+            color: #ff6f61;
+            margin: 0 20px;
+            animation: scroll 15s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        /* Gallery Grid */
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            padding: 20px;
+        }
+        .gallery-item {
+            width: 180px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
+        .gallery-item:hover {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+        }
+        .gallery-item .desc {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .filter-tags {
+    margin-bottom: 20px;
+}
+.filter-tags .button {
+    margin: 5px;
+    color: #ff6f61;
+    border-color: #ff6f61;
+}
+.filter-tags .button:hover {
+    background-color: #ff6f61;
+    color: #fff;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar is-primary">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="#">Portofolio Saya</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero is-info is-medium">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <figure class="image is-128x128 is-inline-block">
+                    <img src="https://envs.sh/jZ3.jpg" alt="Foto Profil" class="profile-image">
+                </figure>
+                <h1 class="title">M. Rifaldo Saputra</h1>
+                <h2 class="subtitle">Web Developer & Designer</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Scrolling Section -->
+    <div class="skills-section">
+        <i class="fab fa-html5"></i>
+        <i class="fab fa-css3-alt"></i>
+        <i class="fab fa-js-square"></i>
+        <i class="fab fa-react"></i>
+        <i class="fab fa-node"></i>
+        <i class="fab fa-python"></i>
+        <i class="fab fa-php"></i>
+        <i class="fab fa-laravel"></i>
+        <i class="fas fa-database"></i>
+        <i class="fab fa-git-alt"></i>       
+        <i class="fab fa-github"></i>         
+        <i class="fab fa-angular"></i>        
+        <i class="fab fa-vuejs"></i>          
+        <i class="fab fa-docker"></i>         
+        <i class="fab fa-aws"></i>            
+        <i class="fab fa-linux"></i>          
+        <i class="fab fa-bootstrap"></i>      
+        <i class="fab fa-npm"></i>            
+        <i class="fab fa-wordpress"></i>      
+    </div>
+
+    <!-- Roadmap Pendidikan -->
+    <section class="section">
+        <div class="container">
+            <h3 class="title is-4 has-text-centered">Roadmap Pendidikan</h3>
+            <ul class="roadmap">
+                <li><strong>2010 - 2013:</strong> SD Negeri 1 Kota X</li>
+                <li><strong>2013 - 2016:</strong> SMP Negeri 2 Kota X</li>
+                <li><strong>2016 - 2019:</strong> SMA Negeri 3 Kota Y</li>
+                <li><strong>2019 - 2023:</strong> Universitas Z - Teknik Informatika</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Gallery Section 
+    <section class="section">
+        <div class="container">
+            <h3 class="title is-4 has-text-centered">Project Gallery</h3>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <a href="img_5terre.jpg" target="_blank">
+                        <img src="/gambar/kalkulator.jpg" alt="kalkulator">
+                    </a>
+                    <div class="desc">Kalkulator - laravel </div>
+                </div>
+                <div class="gallery-item">
+                    <a href="img_forest.jpg" target="_blank">
+                        <img src="img_forest.jpg" alt="Forest">
+                    </a>
+                    <div class="desc">Forest Project</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="img_lights.jpg" target="_blank">
+                        <img src="img_lights.jpg" alt="Northern Lights">
+                    </a>
+                    <div class="desc">Northern Lights Project</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="img_mountains.jpg" target="_blank">
+                        <img src="img_mountains.jpg" alt="Mountains">
+                    </a>
+                    <div class="desc">Mountain Project</div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section class="section">
+        <div class="container">
+            <h3 class="title is-4 has-text-centered">Project Gallery</h3>
+    
+            <!-- Filter Tags -->
+            <div class="filter-tags has-text-centered">
+                <button class="button is-small" onclick="filterProjects('all')">All</button>
+                <button class="button is-small" onclick="filterProjects('laravel')">Laravel</button>
+                <button class="button is-small" onclick="filterProjects('web')">Web</button>
+                <button class="button is-small" onclick="filterProjects('design')">Design</button>
+            </div>
+    
+            <!-- Project Gallery -->
+            <div class="gallery-container">
+                <div class="gallery-item" data-tags="laravel web">
+                    <a href="img_5terre.jpg" target="_blank">
+                        <img src="/gambar/kalkulator.jpg" alt="Kalkulator Project">
+                    </a>
+                    <div class="desc">Kalkulator  simple menggunakan laravel</div>
+                </div>
+                <div class="gallery-item" data-tags="web">
+                    <a href="img_forest.jpg" target="_blank">
+                        <img src="img_forest.jpg" alt="Forest Project">
+                    </a>
+                    <div class="desc">Forest Project - Web</div>
+                </div>
+                <div class="gallery-item" data-tags="design">
+                    <a href="img_lights.jpg" target="_blank">
+                        <img src="img_lights.jpg" alt="Northern Lights Project">
+                    </a>
+                    <div class="desc">Northern Lights - Design</div>
+                </div>
+                <div class="gallery-item" data-tags="design web">
+                    <a href="img_mountains.jpg" target="_blank">
+                        <img src="img_mountains.jpg" alt="Mountain Project">
+                    </a>
+                    <div class="desc">Mountain Project - Web & Design</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function filterProjects(tag) {
+            const items = document.querySelectorAll('.gallery-item');
+        
+            items.forEach(item => {
+                // Show all items if the "all" tag is selected
+                if (tag === 'all') {
+                    item.style.display = 'block';
+                } else {
+                    // Check if the item contains the selected tag
+                    const tags = item.getAttribute('data-tags').split(' ');
+                    if (tags.includes(tag)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+        }
+        </script>
+        
+
+</body>
+</html>
