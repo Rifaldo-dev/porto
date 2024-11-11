@@ -105,6 +105,53 @@
     color: #fff;
 }
 
+
+        .status{
+            display: inline-block;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  background-color: gray;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid black;
+
+
+        }
+
+        .typing-text {
+    font-size: 24px;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #000;
+    animation: typing 3s steps(20, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    50% { border-color: transparent; }
+}
+
+
+.shaking-text {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    animation: shake 0.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-2px, 2px); }
+    50% { transform: translate(2px, -2px); }
+    75% { transform: translate(-2px, -2px); }
+    100% { transform: translate(0, 0); }
+}
     </style>
 </head>
 <body>
@@ -122,8 +169,9 @@
                 <figure class="image is-128x128 is-inline-block">
                     <img src="https://envs.sh/jZ3.jpg" alt="Foto Profil" class="profile-image">
                 </figure>
-                <h1 class="title">M. Rifaldo Saputra</h1>
-                <h2 class="subtitle">🟢 online</h2>
+                <div class="typing-text"><h1 class="title">M. Rifaldo Saputra</h1>
+                </div>
+                <div class="shaking-text">   <h2 class="status">🟢 online</h2> </div>
             </div>
         </div>
     </section>
